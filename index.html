@@ -1,63 +1,99 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>danayasi — Портфолио</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
-  <header class="hero">
-    <h1 class="title animate-on-load">Danayasi</h1>
-    <p class="subtitle animate-on-load">Начинающий веб-разработчик, системный энтузиаст</p>
+  <header class="hero animate-on-load">
+    <h1 class="title">danayasi</h1>
+    <p class="subtitle">Начинающий веб-разработчик, геймдев.</p>
   </header>
 
-
-  <section class="about animate-on-load">
-    <h2 style="text-align: center;">Обо мне</h2>
-    <p>Я начинающий разработчик, обучающийся на веб-разработчика.</p>
-  </section>
-
- <section class="tech-stack animate-on-load">
-
-        <div class="stack-icons">
-            <i class="devicon-html5-plain-wordmark colored " title="HTML5"></i>
-            <i class="devicon-css3-plain-wordmark colored " title="CSS3"></i>
-            <i class="devicon-csharp-plain colored " title="C#"></i>
-            <i class="devicon-python-plain-wordmark colored " title="Python"></i>
-            <i class="devicon-godot-plain colored " title="Godot"></i>
-            <i class="devicon-figma-plain colored " title="Figma"></i>
-        </div>
+  <main>
+    <section class="about animate-on-load">
+      <h2>Обо мне</h2>
+      <p style="text-align: center;" class="animate-on-load">
+        Я начинающий разработчик, обучаюсь веб-разработке. Занимаюсь фронтендом, настраиваю Linux-окружения.
+        Ценю стабильность, читаемость кода и визуальное качество интерфейсов.
+      </p>
     </section>
 
-<section class="projects animate-on-load">
-  <h2 style="text-align: center;">Проекты</h2>
-  <div class="projects-grid">
-    <div class="project-card">
-        <a href="https://cacao-studio.itch.io/blox-dodge" target="_blank">
-      <h3>Blox Dodge</h3>
-      </a>
-      <p>Аркадный платформер. Цель — уклоняться от рандомно создаваемых препятствий и сложных паттернов.</p>
-      <p><strong>Статус:</strong> Заброшен</p>
-
-        <summary></summary>
-        <div class="screenshots-grid animate-on-load">
-          <img style="margin: 20px;" src="media/loc1.jpg" alt="1 уровень" loading="lazy">
-          <img style="margin: 20px;" src="media/loc2.jpg" alt="2 уровень" loading="lazy">
-          <img style="margin: 20px;" src="media/skins.jpg" alt="Настройки" loading="lazy">
+    <section class="tech-stack animate-on-load">
+      <h2>Технологический стек</h2>
+      <div class="stack-grid">
+        <div class="tech-item">
+          <i class="devicon-html5-plain-wordmark colored"></i>
+          <div><h3>HTML5</h3><p>Структура сайтов.</p></div>
         </div>
-      </details>
-    </div>
-  </div>
-</section>
+        <div class="tech-item">
+          <i class="devicon-css3-plain-wordmark colored"></i>
+          <div><h3>CSS3</h3><p>Flexbox, Grid, адаптивность, анимации.</p></div>
+        </div>
+        <div class="tech-item">
+          <i class="devicon-csharp-plain colored"></i>
+          <div><h3>C#</h3><p>Консольные приложения, алгоритмы.</p></div>
+        </div>
+        <div class="tech-item">
+          <i class="devicon-python-plain-wordmark colored"></i>
+          <div><h3>Python</h3><p>Скрипты, парсинг, консольные программы.</p></div>
+        </div>
+        <div class="tech-item">
+          <i class="devicon-godot-plain colored"></i>
+          <div><h3>Godot</h3><p>2D-игры (например, Blox Dodge).</p></div>
+        </div>
+        <div class="tech-item">
+          <i class="devicon-figma-plain colored"></i>
+          <div><h3>Figma</h3><p>Прототипирование, UI/UX-дизайн.</p></div>
+        </div>
+      </div>
+    </section>
 
-  <section class="contact animate-on-load">
-    <h2>Связаться со мной</h2>
-    <p style="text-align: center;">
-      <a href="https://github.com/danayasi" style="text-align: center;" target="_blank">GitHub</a> •
-      <a href="https://t.me/danayasi" style="text-align: center;" target="_blank">Telegram</a>
-    </p>
-  </section>
+    <section class="projects animate-on-load">
+      <h2>Проекты</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3><a href="https://cacao-studio.itch.io/blox-dodge" target="_blank" rel="noopener">Blox Dodge</a></h3>
+          <p>Аркадный 2D-платформер. Цель — уклоняться от случайных атак. Простое управление, пиксельная графика.<br><strong>Статус:</strong> Архивирован.</p>
+
+          <div class="slider-simple">
+            <div class="slider-images" id="sliderImages">
+              <img src="media/loc1.jpg" alt="Первый уровень — Blox Dodge">
+              <img src="media/loc2.jpg" alt="Второй уровень — больше препятствий">
+              <img src="media/skins.jpg" alt="Меню скинов">
+            </div>
+            <button class="slider-btn slider-prev" id="sliderPrev" aria-label="Предыдущее изображение">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="slider-btn slider-next" id="sliderNext" aria-label="Следующее изображение">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="slider-dots" id="sliderDots"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact animate-on-load">
+      <h2>Связаться со мной</h2>
+      <div class="contact-icons">
+        <a href="https://github.com/danayasi" target="_blank" rel="noopener" aria-label="GitHub">
+          <i class="devicon-github-original"></i>
+        </a>
+        <a href="https://t.me/danayasi" target="_blank" rel="noopener" aria-label="Telegram">
+          <i class="fab fa-telegram"></i>
+        </a>
+        <a href="https://discord.com/users/danayasi" target="_blank" rel="noopener" aria-label="Discord">
+          <i class="fab fa-discord"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
-</html> 
+</html>
