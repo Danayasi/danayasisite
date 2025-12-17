@@ -244,3 +244,10 @@ h2::after {
   font-size: 12px;
   opacity: 0.5;
 }
+
+.contact-icons a {
+  text-decoration: none !important;
+}
+.contact-icons a i {
+  text-decoration: none !important;
+}
