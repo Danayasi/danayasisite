@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
 <body>
+  
   <header class="hero animate-on-load">
     <h1 class="title">danayasi</h1>
     <p class="subtitle">Начинающий веб-разработчик, геймдев.</p>
@@ -44,7 +45,7 @@
         </div>
         <div class="tech-item">
           <i class="devicon-godot-plain colored"></i>
-          <div><h3>Godot</h3><p>2D-игры (например, Blox Dodge).</p></div>
+          <div><h3>Godot</h3><p>2D-игры.</p></div>
         </div>
         <div class="tech-item">
           <i class="devicon-figma-plain colored"></i>
@@ -95,5 +96,50 @@
   </main>
 
   <script src="script.js"></script>
+  <div class="code-dust" id="codeDust"></div>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const container = document.getElementById('codeDust');
+  const commands = [
+    'neofetch',
+    'sudo apt install godot',
+    'extends CharacterBody2D',
+    'if Input.is_action_pressed("ui_right"):',
+    'velocity.x = SPEED',
+    '$Sprite2D.hide()',
+    'move_and_slide()',
+    'git commit -m "fix: slider"',
+    'python -m http.server',
+    'wacom-set-dev 12 13 14',
+    'xinput set-prop "Wacom Pen stylus"',
+    'Console.ReadLine()',
+    'document.querySelector("#sliderImages")',
+    'track.style.transform = `translateX(...)`',
+    'chmod +x deploy.sh'
+  ];
+
+  const vw = window.innerWidth;
+  const vh = window.innerHeight;
+  const count = Math.floor(Math.min(vw, vh) / 60); 
+
+  for (let i = 0; i < count; i++) {
+    const el = document.createElement('div');
+    el.className = 'code-item';
+    el.textContent = commands[Math.floor(Math.random() * commands.length)];
+    
+    const x = Math.random() * (vw - 200);
+    const y = Math.floor(Math.random() * (vh - 30));
+    const opacity = 0.6 + Math.random() * 0.3;
+
+    el.style.left = `${x}px`;
+    el.style.top = `${y}px`;
+    el.style.opacity = opacity;
+  
+
+    container.appendChild(el);
+  }
+});
+</script>
 </body>
 </html>
